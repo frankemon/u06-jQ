@@ -12,59 +12,59 @@
     <title>u06-jQuery</title>
 </head>
 
-<body class="text-gray-600">
-    <main>
-        <div class="title-container text-center mt-3">
-            <h1 class="text-2xl">My Trello Clone</h1>
-            <p>Francois Hugo</p>
-            <p class="text-sm">Chas Academy</p>
-        </div>
-        <div class="column-titles flex">
-            <p class="text-2xl">To-Do</p>
-            <p class="text-2xl">Doing</p>
-            <p class="text-2xl">Done</p>
-        </div>
-        <!-- card container -->
-        <div class="h-64 grid grid-rows-1 grid-flow-col gap-4 m-10 text-center">
-            <div class="card-column bg-red-200 card rounded">
-                <ul>
-                    <li>
-                        <div class="card flex flex-col items-center m-5 border border-black rounded">
-                            Task 3
-                            <button id="opener" class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">View</button>
-                            <div id="dialog" title="Your Task">
-                                <p>This shows more about the task</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <div class="card m-5 border border-black rounded">
-                            Task 4
-                        </div>
-                    </li>
-                </ul>
+<body>
+    <!-- main page title -->
+    <main class="text-gray-600">
+        <div class="wrapper flex flex-col text-center">
+            <div class="page-title-container">
+                <h1 class="text-2xl my-1">My Trello Clone</h1>
+                <p class="text-xl">Francois Hugo</p>
+                <p class="mb-2">Chas Academy</p>
             </div>
-            <div class="card-column w-auto bg-blue-200 card rounded">
-                <ul>
-                    <li>
-                        <div class="m-5 border border-black rounded">
-                            Task 2
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-column w-auto bg-green-200 card rounded">
-                <ul>
-                    <li>
-                        <div class="card m-5 border border-black rounded">
-                            Task 1
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+            <!-- card container holds all columns -->
+            <div class="column-container flex justify-evenly">
+                <!-- red column (to-do) -->
+                <div class="column pl-5 pr-5 bg-red-300 border border-black border-opacity-30 rounded-md"
+                    style="height:600px;width:300px;">
+                    <div>
+                        <h1 class="text-2xl my-1 mb-2 border-b-2 border-gray-500">To-Do</h1>
+                    </div>
+                    <!-- todo 3 -->
+                    <div class="todo border border-black rounded bg-white bg-opacity-30">
+                        <p class="font-bold">Task 3</p>
+                        <button
+                            class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                    </div>
+                </div>
+
+                <!-- blue column (doing) -->
+                <div class="column pl-5 pr-5 bg-blue-200 border border-black border-opacity-30 rounded-md"
+                    style="height:600px;width:300px;">
+                    <div>
+                        <h1 class="text-2xl my-1 mb-2 border-b-2 border-gray-500">Doing</h1>
+                    </div>
+                    <!-- todo 2 -->
+                    <div class="todo border border-black rounded bg-white bg-opacity-30">
+                        <p class="font-bold">Task 2</p>
+                        <button
+                            class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                    </div>
+                </div>
+
+                <!-- green column (done) -->
+                <div class="column pl-5 pr-5 bg-green-200 border border-black border-opacity-30 rounded-md"
+                    style="height:600px;width:300px;">
+                    <div>
+                        <h1 class="text-2xl my-1 mb-2 border-b-2 border-gray-500">Done</h1>
+                    </div>
+                    <!-- todo 1 -->
+                    <div class="todo border border-black rounded bg-white bg-opacity-30">
+                        <p class="font-bold">Task 1</p>
+                        <button
+                            class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                    </div>
+                </div>
+
     </main>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

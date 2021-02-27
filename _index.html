@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link href="/tailwind.css" rel="stylesheet"> -->
+    <!-- tailwind cdn -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>u06-jQuery</title>
+</head>
+
+<body class="text-gray-600">
+    <main>
+        <div class="title-container text-center mt-3">
+            <h1 class="text-2xl">My Trello Clone</h1>
+            <p>Francois Hugo</p>
+            <p class="text-sm">Chas Academy</p>
+        </div>
+        <div class="grid grid-rows-1 grid-flow-col gap-4 m-5 text-center">
+            <p class="text-2xl">To-Do</p>
+            <p class="text-2xl">Done</p>
+            <p class="text-2xl">Doing</p>
+        </div>
+        <!-- card container -->
+        <!-- h-64 -->
+        <!-- <div class="grid grid-rows-1 grid-flow-col gap-4 m-10 text-center">   -->
+        <div class="flex justify-evenly text-center">  
+            <!-- individual cards -->
+            <div class="card-column bg-red-200 card rounded flex-col w-sm" style="width:450px">
+                <ul>
+                    <li>
+                        <div class="card flex flex-col w-auto items-center m-5 border border-black rounded font-bold p-2">
+                            <p>Task 3
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil cumque delectus.
+                            </p>
+                            <button id="opener"
+                                class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                            <div id="dialog" title="Your Task"
+                                class="bg-gray-400 text-left border-black border rounded">
+                                <p>This shows more about the task. This shows more about the taskThis shows more about
+                                    the taskThis shows more about the taskThis shows more about the taskThis shows more
+                                    about the taskThis shows more about the task</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="card flex flex-col w-auto items-center m-5 border border-black rounded font-bold p-2">Task 4</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-column bg-blue-200 card rounded flex flex-col max-w-sm" style="width:450px">
+                <ul>
+                    <li>
+                        <div class="m-5 border border-black rounded font-bold p-2">
+                            <p>Task 2</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-column bg-green-200 card rounded flex flex-col max-w-sm" style="width:450px">
+                <ul>
+                    <li>
+                        <div class="card m-5 border border-black rounded font-bold p-2">
+                            <p>Task 1</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>
