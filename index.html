@@ -19,14 +19,22 @@
             <p>Francois Hugo</p>
             <p class="text-sm">Chas Academy</p>
         </div>
-        <!-- card holder -->
+        <div class="column-titles flex">
+            <p class="text-2xl">To-Do</p>
+            <p class="text-2xl">Doing</p>
+            <p class="text-2xl">Done</p>
+        </div>
+        <!-- card container -->
         <div class="h-64 grid grid-rows-1 grid-flow-col gap-4 m-10 text-center">
-            <div class="card-column w-auto bg-red-200 card rounded">
-                <h1>To-Do</h1>
+            <div class="card-column bg-red-200 card rounded">
                 <ul>
                     <li>
-                        <div class="card m-5 border border-black rounded">
+                        <div class="card flex flex-col items-center m-5 border border-black rounded">
                             Task 3
+                            <button id="opener" class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">View</button>
+                            <div id="dialog" title="Your Task">
+                                <p>This shows more about the task</p>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -39,7 +47,6 @@
                 </ul>
             </div>
             <div class="card-column w-auto bg-blue-200 card rounded">
-                <h1>Doing</h1>
                 <ul>
                     <li>
                         <div class="m-5 border border-black rounded">
@@ -49,7 +56,6 @@
                 </ul>
             </div>
             <div class="card-column w-auto bg-green-200 card rounded">
-                <h1>Done</h1>
                 <ul>
                     <li>
                         <div class="card m-5 border border-black rounded">
