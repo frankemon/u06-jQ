@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/frankemon/u06-jQ#readme",
   "dependencies": {
+    "jquery": "^3.5.1",
     "tailwindcss": "^2.0.3"
   }
 }
