@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="/tailwind.css" rel="stylesheet">
     <title>u06-jQuery</title>
 </head>
-<body>
-    <h1>Hello World</h1>
+<body class="text-gray-600">
+    <main>
+        <h1>Hello World</h1>
+        <div class="card-wrapper flex">
+            <div class="card-column">
+                <h1>To-Do</h1>
+                <div class="card">Task 3</div>
+            </div>
+            <div class="card-column">
+                <h1>In Progress</h1>
+                <div class="card">Task 2</div>
+            </div>
+            <div class="card-column">
+                <h1>Done</h1>
+                <div class="card">Task 1</div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
