@@ -9,6 +9,7 @@
     <!-- <link href="/tailwind.css" rel="stylesheet"> -->
     <!-- tailwind cdn -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>u06-jQuery</title>
 </head>
 
@@ -23,22 +24,30 @@
             </div>
             <!-- card container holds all columns -->
             <div class="column-container flex justify-evenly">
+
                 <!-- red column (to-do) -->
-                <div class="column pl-5 pr-5 bg-red-300 border border-black border-opacity-30 rounded-md"
+                <div id="sortable1"
+                    class="connectedSortable pl-5 pr-5 bg-red-300 border border-black border-opacity-30 rounded-md"
                     style="height:600px;width:300px;">
+                    <h1 class="text-2xl my-1 mb-2 border-b-2 border-gray-500">To-Do</h1>
                     <div>
-                        <h1 class="text-2xl my-1 mb-2 border-b-2 border-gray-500">To-Do</h1>
                     </div>
+
                     <!-- todo 3 -->
                     <div class="todo border border-black rounded bg-white bg-opacity-30">
                         <p class="font-bold">Task 3</p>
                         <button
-                            class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                            class="opener text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                    </div>
+                    <div title="Your Task"
+                        class="dialog bg-gray-400 text-left border-black border rounded mx-5 py-2 px-2 text-center">
+                        <p>This shows more about task three. You still need to start this task. </p>
                     </div>
                 </div>
 
                 <!-- blue column (doing) -->
-                <div class="column pl-5 pr-5 bg-blue-200 border border-black border-opacity-30 rounded-md"
+                <div id="sortable2"
+                    class="connectedSortable pl-5 pr-5 bg-blue-200 border border-black border-opacity-30 rounded-md"
                     style="height:600px;width:300px;">
                     <div>
                         <h1 class="text-2xl my-1 mb-2 border-b-2 border-gray-500">Doing</h1>
@@ -47,12 +56,18 @@
                     <div class="todo border border-black rounded bg-white bg-opacity-30">
                         <p class="font-bold">Task 2</p>
                         <button
-                            class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                            class="opener text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
                     </div>
+                    <div title="Your Task"
+                        class="dialog bg-gray-400 text-left border-black border rounded mx-5 py-2 px-2 text-center">
+                        <p>This shows more about task two. You are currently doing this task. </p>
+                    </div>
+
                 </div>
 
                 <!-- green column (done) -->
-                <div class="column pl-5 pr-5 bg-green-200 border border-black border-opacity-30 rounded-md"
+                <div id="sortable3"
+                    class="connectedSortable pl-5 pr-5 bg-green-200 border border-black border-opacity-30 rounded-md"
                     style="height:600px;width:300px;">
                     <div>
                         <h1 class="text-2xl my-1 mb-2 border-b-2 border-gray-500">Done</h1>
@@ -61,7 +76,11 @@
                     <div class="todo border border-black rounded bg-white bg-opacity-30">
                         <p class="font-bold">Task 1</p>
                         <button
-                            class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                            class="opener text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                    </div>
+                    <div title="Your Task"
+                        class="dialog bg-gray-400 text-left border-black border rounded mx-5 py-2 px-2 text-center">
+                        <p>This shows more about your first task. It is complete.</p>
                     </div>
                 </div>
 

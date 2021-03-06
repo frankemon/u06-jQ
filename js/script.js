@@ -1,11 +1,12 @@
-// Sortable
+// Sortable lists
 $( function() {
-    $( ".card-column" ).sortable({
-      connectWith: ".card"
-    }).disableSelection();
-  } );
+  $( "#sortable1, #sortable2, #sortable3" ).sortable({
+    connectWith: ".connectedSortable"
+  }).disableSelection();
+} );
 
-  // Dialog
+
+  // Dialog 
   $( function() {
     $( "#dialog" ).dialog({
       autoOpen: false,
@@ -19,15 +20,34 @@ $( function() {
       }
     });
  
-    $( "#opener" ).on( "click", function() {
-      $( "#dialog" ).dialog( "open" );
+    $( ".opener" ).on( "click", function() {
+      $( ".dialog" ).dialog( "open" );
     });
   } );
 
-  $('#dialog').dialog({
-    height: 100,
+  $('.dialog').dialog({
+    height: "auto",
     width: 300,
     modal: false,
     resizable: true,
     dialogClass: 'no-close success-dialog'
 });
+
+// Dialog w/ delete
+// $( function() {
+//   $( "#dialog-confirm" ).dialog({
+//     autoOpen: false,
+//     resizable: false,
+//     height: "auto",
+//     width: 300,
+//     modal: true,
+//     buttons: {
+//       "Delete all items": function() {
+//         $( this ).dialog( "close" );
+//       },
+//       Cancel: function() {
+//         $( this ).dialog( "close" );
+//       }
+//     }
+//   });
+// } );

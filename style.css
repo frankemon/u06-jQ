@@ -1,0 +1,16 @@
+.ui-dialog-title {
+    background-color: blue;
+    text-align: center;
+}
+
+.ui-button  {
+    color: purple;
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.ui-dialog-titlebar {
+    display: flex;
+    justify-content: space-evenly;
+}
