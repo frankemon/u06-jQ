@@ -27,7 +27,7 @@ $( function() {
 
   $('.dialog').dialog({
     height: "auto",
-    width: 300,
+    width: "100"
     // modal: false,
     // resizable: true,
     // dialogClass: 'no-close success-dialog'
@@ -37,3 +37,9 @@ $( function() {
 $( function() {
   $( "#tabs" ).tabs();
 } );
+
+// Datepicker
+$( function() {
+  $( "#datepicker" ).datepicker();
+} );
+
