@@ -1,6 +1,6 @@
 // Sortable lists
 $( function() {
-  $( "#sortable1, #sortable2, #sortable3" ).sortable({
+  $( ".connectedSortable" ).sortable({
     connectWith: ".connectedSortable"
   }).disableSelection();
 } );

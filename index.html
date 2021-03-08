@@ -27,38 +27,44 @@
             <div class="column-container flex justify-evenly">
 
                 <!-- red column (to-do) -->
-                <div id="sortable1"
-                    class="connectedSortable pl-5 pr-5 bg-red-300 border border-black border-opacity-30 rounded-md"
+                <div class="flex flex-col pl-5 pr-5 bg-red-300 border border-black border-opacity-30 rounded-md"
                     style="height:600px;width:300px;">
                     <h1 class="text-2xl my-1 mb-2 border-b-2 border-gray-500">To-Do</h1>
-                    <div>
+
+                    <div class="connectedSortable flex-1">
+                        <!-- todo 3 -->
+                        <div class="todo border border-black rounded bg-white bg-opacity-30 my-1">
+                            <p class="font-bold">Task 3</p>
+                            <button id="opener"
+                                class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                            <p class="mb-2 font-bold">Date: <input type="text" id="datepicker"
+                                    class="bg-white bg-opacity-30 border border-black rounded"></p>
+                        </div>
                     </div>
 
-                    <!-- todo 3 -->
-                    <div class="todo border border-black rounded bg-white bg-opacity-30">
-                        <p class="font-bold">Task 3</p>
-                        <button id="opener"
-                        class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
-                        <p class="mb-2 font-bold">Date: <input type="text" id="datepicker" class="bg-white bg-opacity-30 border border-black rounded"></p>
-                    </div>
                     <div id="dialog" title="Task title - Drag me!">
-                        <p class="text-sm bg-white bg-opacity-30 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 px-4 ">This shows more about task three. You still need to start this task.</p>
+                        <p
+                            class="text-sm bg-white bg-opacity-30 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 px-4 ">
+                            This shows more about task three. You still need to start this task.</p>
                     </div>
                 </div>
 
                 <!-- blue column (doing) -->
-                <div id="sortable2"
-                    class="connectedSortable pl-5 pr-5 bg-blue-200 border border-black border-opacity-30 rounded-md"
+                <div class="flex flex-col pl-5 pr-5 bg-blue-200 border border-black border-opacity-30 rounded-md"
                     style="height:600px;width:300px;">
                     <div>
                         <h1 class="text-2xl my-1 mb-2 border-b-2 border-gray-500">Doing</h1>
                     </div>
-                    <!-- todo 2 -->
-                    <div class="todo border border-black rounded bg-white bg-opacity-30">
-                        <p class="font-bold">Task 2</p>
-                        <button id=""
-                        class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
-                        <p class="mb-2 font-bold">Date: <input type="text" id="datepicker" class="bg-white bg-opacity-30 border border-black rounded"></p>
+
+                    <div class="connectedSortable flex-1">
+                        <!-- todo 2 -->
+                        <div class="todo border border-black rounded bg-white bg-opacity-30 my-1">
+                            <p class="font-bold">Task 2</p>
+                            <button id=""
+                                class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2 mb-2">View</button>
+                            <p class="mb-2 font-bold">Date: <input type="text" id="datepicker"
+                                    class="bg-white bg-opacity-30 border border-black rounded"></p>
+                        </div>
                     </div>
                     <!-- <div id="" title="Your Task"
                         class="bg-gray-400 text-left border-black border rounded mx-5 py-2 px-2 text-center">
@@ -68,33 +74,49 @@
                 </div>
 
                 <!-- green column (done) -->
-                <div 
-                    class="pl-5 pr-5 bg-green-200 border border-black border-opacity-30 rounded-md"
+                <div class="flex flex-col pl-5 pr-5 bg-green-200 border border-black border-opacity-30 rounded-md"
                     style="height:600px;width:300px;">
                     <div>
                         <h1 class="text-2xl my-1 mb-2 border-b-2 border-gray-500">Done</h1>
                     </div>
+                    
+                    <div class="connectedSortable flex-1">
                     <!-- todo 1 -->
-                    <div class="todo border border-black rounded bg-white bg-opacity-30 px-2">
-                        <p class="font-bold">Task 1</p>
-                        <!-- <p class="mb-2">Date: <input type="text" id="datepicker"></p> -->
-                        <div id="tabs">
-                            <ul class="flex justify-left">
-                                <li class="text-sm bg-white hover:bg-gray-100 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 px-4 mt-2"><a href="#tabs-1">Tab 1</a></li>
-                                <li class="text-sm bg-white hover:bg-gray-100 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 px-4 mt-2"><a href="#tabs-2">Tab 2</a></li>
-                                <li class="text-sm bg-white hover:bg-gray-100 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 px-4 mt-2"><a href="#tabs-3">Tab 3</a></li>
-                            </ul>
-                            <div id="tabs-1" class="text-sm bg-white bg-opacity-30 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 pl-4 text-left mb-2">
-                                <p>Tab one content.</p>
+                        <div class="todo border border-black rounded bg-white bg-opacity-30 px-2 my-1">
+                            <p class="font-bold">Task 1</p>
+                            <!-- <p class="mb-2">Date: <input type="text" id="datepicker"></p> -->
+                            <div id="tabs">
+                                <ul class="flex justify-left">
+                                    <li
+                                        class="text-sm bg-white hover:bg-gray-100 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 px-4 mt-2">
+                                        <a href="#tabs-1">Tab 1</a>
+                                    </li>
+                                    <li
+                                        class="text-sm bg-white hover:bg-gray-100 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 px-4 mt-2">
+                                        <a href="#tabs-2">Tab 2</a>
+                                    </li>
+                                    <li
+                                        class="text-sm bg-white hover:bg-gray-100 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 px-4 mt-2">
+                                        <a href="#tabs-3">Tab 3</a>
+                                    </li>
+                                </ul>
+                                <div id="tabs-1"
+                                    class="text-sm bg-white bg-opacity-30 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 pl-4 text-left mb-2">
+                                    <p>Tab one content.</p>
+                                </div>
+                                <div id="tabs-2"
+                                    class="text-sm bg-white bg-opacity-30 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 pl-4 text-left mb-2">
+                                    <p>Tab two content. There isn't much to see.</p>
+                                </div>
+                                <div id="tabs-3"
+                                    class="text-sm bg-white bg-opacity-30 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 pl-4 text-left mb-2">
+                                    <p>Tab three content. This tab's content is much longer and may show over several lines.
+                                    </p>
+                                </div>
+                                <p class="mb-2 font-bold">Date: <input type="text" id="datepicker"
+                                        class="bg-white bg-opacity-30 border border-black rounded"></p>
+
                             </div>
-                            <div id="tabs-2" class="text-sm bg-white bg-opacity-30 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 pl-4 text-left mb-2">
-                                <p>Tab two content. There isn't much to see.</p> 
-                            </div>
-                            <div id="tabs-3" class="text-sm bg-white bg-opacity-30 text-gray-800 font-semibold border border-gray-400 rounded shadow py-2 pl-4 text-left mb-2">
-                                <p>Tab three content. This tab's content is much longer and may show over several lines.</p>
-                            </div>
-                            <p class="mb-2 font-bold">Date: <input type="text" id="datepicker" class="bg-white bg-opacity-30 border border-black rounded"></p>
-                            
                         </div>
                     </div>
                 </div>
