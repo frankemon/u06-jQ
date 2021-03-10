@@ -138,3 +138,6 @@
     color: #000;
 }
 
+.toggle-list li {
+    cursor: pointer;
+}
