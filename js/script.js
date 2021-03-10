@@ -38,34 +38,33 @@ $(() => {
   // My custom widget
   // this widget adds a line through text to signify that it is complete
   
- const taskList = $('#taskList');  // Save html ul element as const
- let state = false;
+//  const taskList = $('#taskList');  // Save html ul element as const
+//  let state = false;
   
-  $.widget( "custom.completeTask", {
+  $.widget( "custom.toggleList", {
     options: {
-      // value: false  // maybe use this to set line-through
-      
+      value: 0  // maybe use this to set line-through
     },
-    _create: function() {
-        $( "#taskList li" ).on( "click", function() {
-          $(this).addClass('line-through')
-          });
+
+        _create: function() {
+          console.log("hello");
+          // $( "#taskList li" ).on( "click", function() {
+          //  $(this).toggleClass('line-through')
+          //   });
+
         },
 
-        _update: function() {
-          $( "#taskList li" ).on( "click", function() {
-          this.element.removeClass("line-through");
-          console.log(this);
-          }
-        
-          )},
-
-        _destroy: function() {
-          this.element.removeClass('line-through')
-        }
-}); 
+     
+      });
+      
+      
+      
+      console.log("bye");
+      
+    });// ----------------- close jq ----------------
+    
+      $('#taskList').toggleList();
 
 
-  $('#taskList li').completeTask();
 
-});// ----------------- close jq ----------------
+
