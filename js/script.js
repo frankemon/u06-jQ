@@ -38,76 +38,34 @@ $(() => {
   // My custom widget
   // this widget adds a line through text to signify that it is complete
   
-  // let taskList = ${'#ul-id'}; // targets
-  // const ulElement = ${'#task-list'}; // targets
+ const taskList = $('#taskList');  // Save html ul element as const
+ let state = false;
   
   $.widget( "custom.completeTask", {
     options: {
-      value: false
+      // value: false  // maybe use this to set line-through
       
     },
-    // Constructor
     _create: function() {
-      // this.element.addClass("line-through");
-      this._update();
-    },
+        $( "#taskList li" ).on( "click", function() {
+          $(this).addClass('line-through')
+          });
+        },
 
-    _setOption: function() {
-      this.options[key] = value;
-      this._update();
-    },
-
-    _update: function() {
-      // const isDone = `$(this.options.value)`;
-      if (this.options.value === true) {
-        this.element.addClass("line-through");
-        this._trigger("complete", null, {value:true});
-      }
-    },
-
-    value: function(value) {
-      if (value === false) {
-        return this.options.value;
-      } else {
-      // this.element.addClass("line-through");
-
-        // this.options.value = this._constrain(value);
-        this._update();
+        _update: function() {
+          $( "#taskList li" ).on( "click", function() {
+          this.element.removeClass("line-through");
+          console.log(this);
+          }
         
-      }
-    },
+          )},
 
-    // _constrain: function(value) {
-    //   if (value > 100) {
-    //     value = 100;
-    //   }
-    //   if (value < 0) {
-    //     value = 0;
-    //   }
-    //   return value;
-    // },
+        _destroy: function() {
+          this.element.removeClass('line-through')
+        }
+}); 
 
-    _destroy: function() {
-      this.element
-      .removeClass('line-through')
-      // .text('');
-    }
 
-  });
+  $('#taskList li').completeTask();
 
-  const taskDone = $('#taskOne, #taskTwo, #taskThree').completeTask({value:false});
-  taskDone.comepleteTask('value', true);
-  taskDone.comepleteTask({
-    complete: function(event, data) {
-      alert("Task complete!");
-    }
-  });
-
-  // bar.progressbar('value', 100);
-
-    
-    
-    
-  
-  // $('list1').completeTask({value: 0});
-});
+});// ----------------- close jq ----------------
