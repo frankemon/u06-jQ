@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <!-- <link href="/tailwind.css" rel="stylesheet"> -->
     <!-- tailwind cdn -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -16,7 +14,7 @@
 <body>
     <!-- main page title -->
     <main class="text-gray-600">
-        <div class="wrapper flex flex-col text-center">
+        <div class="wrapper flex flex-col text-center mx-48">
             <div class="page-title-container">
                 <h1 class="text-2xl my-1">My Trello Clone</h1>
                 <p class="text-xl">Francois Hugo</p>
@@ -60,35 +58,21 @@
                         <!-- todo 2 -->
                         <div class="todo border border-black rounded bg-white bg-opacity-30 my-1 px-1">
                             <!-- <div> -->
-                            <p class="font-bold">Stuff to do</p>
+                            <p class="font-bold">Stuff to do:</p>
+                            <p class="mb-3 text-sm italic">* Click the task to mark as complete</p> 
                             <div>
                                 <ul id="taskList" class="text-left pl-5 mb-1 ml-4">
                                     <div class="flex justify-between">
                                         <li id="taskOne" class="list-disc">Wake up</li>
-                                        <!-- <div>
-                                            <button id=""
-                                                class="btn-done text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold px-1 border border-gray-400 rounded shadow mt-1 mb-1">Done</button>
-                                            <button id=""
-                                                class="btn-undo text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold px-1 mx-1 border border-gray-400 rounded shadow mt-1 mb-1">Undo</button>
-                                        </div> -->
+                                        
                                     </div>
                                     <div class="flex justify-between">
                                         <li id="taskTwo" class="addLine list-disc">Shower</li>
-                                        <!-- <div>
-                                            <button id=""
-                                                class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold px-1 border border-gray-400 rounded shadow mt-1 mb-1">Done</button>
-                                            <button id=""
-                                                class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold px-1 mx-1 border border-gray-400 rounded shadow mt-1 mb-1">Undo</button>
-                                        </div> -->
+                                       
                                     </div>
                                     <div class="flex justify-between">
                                         <li id="taskThree" class="addLine list-disc">Walk dog</li>
-                                        <!-- <div>
-                                            <button id=""
-                                                class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold px-1 border border-gray-400 rounded shadow mt-1 mb-1">Done</button>
-                                            <button id=""
-                                                class="text-sm max-w-min bg-white hover:bg-gray-100 text-gray-800 font-semibold px-1 mx-1 border border-gray-400 rounded shadow mt-1 mb-1">Undo</button>
-                                        </div> -->
+                                        
                                     </div>
                                 </ul>
                             </div>
@@ -98,11 +82,6 @@
                             <!-- </div> -->
                         </div>
                     </div>
-                    <!-- <div id="" title="Your Task"
-                        class="bg-gray-400 text-left border-black border rounded mx-5 py-2 px-2 text-center">
-                        <p>This shows more about task two. You are currently doing this task. </p>
-                    </div> -->
-
                 </div>
 
                 <!-- green column (done) -->

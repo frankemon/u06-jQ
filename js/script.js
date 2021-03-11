@@ -12,11 +12,11 @@ $(() => {
   $("#dialog").dialog({
     autoOpen: false,
     show: {
-      effect: "fade",
+      effect: "bounce",
       duration: 200,
     },
     hide: {
-      effect: "fade",
+      effect: "explode",
       duration: 300,
     },
   });
@@ -41,12 +41,13 @@ $(() => {
 
   $.widget("custom.toggleList", {
     _create: function () {
-      this.element.addClass("toggle-list")
+      this.element.addClass("toggle-list");
       $("li", this.element).on("click", function () {
-        $(this).toggleClass("line-through");
+        $(this).toggleClass("line-through");  // toggle used to add/remove class
       });
     },
   });
 
-  $("#taskList").toggleList();
+  $("#taskList").toggleList(); // calls toggleList on the id taskList
+  
 }); // ----------------- close jq ----------------
